@@ -25,7 +25,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                   .filter((author) =>
                     frontmatter.authors
                       .map((author) => slugify(author))
-                      .includes(slugify(author.frontmatter.title))
+                      .includes(slugify(author.frontmatter.title)),
                   )
                   .map((author, i) => (
                     <Link
@@ -55,7 +55,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                         href={`/categories/${slugify(category)}`}
                         className="mr-3 hover:text-primary"
                       >
-                        &#9635; {humanize(category)}
+                        ◉ {humanize(category)}
                       </Link>
                     </li>
                   ))}
@@ -68,7 +68,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                 height={500}
                 width={1000}
                 alt={title}
-                className="rounded-lg"
+                className="rounded-lg max-h-[500px]"
               />
             )}
             <div className="content mb-16 text-left">
@@ -87,23 +87,26 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                   </li>
                 ))}
               </ul>
-              <Share
+              {/* <Share
                 className="social-share mb-4"
                 title={title}
                 description={description}
                 slug={slug}
-              />
+              /> */}
             </div>
           </article>
         </div>
       </section>
       {similarPosts && similarPosts.length > 0 && (
-        <section className="section">
-          <div className="container">
-            <h2 className="mb-8 text-center">Similar Posts</h2>
-            <SimilarPosts posts={similarPosts.slice(0, 3)} />
-          </div>
-        </section>
+        <>
+          <section className="section">
+            <div className="container">
+              <hr />
+              <h2 className="my-8 text-center">Related</h2>
+              <SimilarPosts posts={similarPosts.slice(0, 3)} />
+            </div>
+          </section>
+        </>
       )}
     </>
   );

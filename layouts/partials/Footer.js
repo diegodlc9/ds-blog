@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="section bg-theme-dark">
       <div className="container text-center">
         {/* footer menu */}
-        <ul className="mb-8 space-x-4">
+        {/* <ul className="mb-8 space-x-4">
           {menu.footer.map((menu) => (
             <li className="inline-block" key={menu.name}>
               <Link href={menu.url} className="p-4 text-light hover:text-white">
@@ -19,9 +19,9 @@ const Footer = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
         {/* social icons */}
-        <Social source={social} className="social-icons mb-8" />
+        {/* <Social source={social} className="social-icons mb-8" /> */}
         {/* copyright */}
         {markdownify(copyright, "p", "text-light")}
       </div>

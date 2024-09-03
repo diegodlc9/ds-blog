@@ -5,7 +5,7 @@ import MDXContent from "./partials/MDXContent";
 import SeoMeta from "./partials/SeoMeta";
 
 const AuthorSingle = ({ frontmatter, content }) => {
-  const { description, social, title, image } = frontmatter;
+  const { description, social, title, image, position } = frontmatter;
 
   return (
     <>
@@ -27,7 +27,8 @@ const AuthorSingle = ({ frontmatter, content }) => {
                 />
               </div>
             )}
-            {markdownify(title, "h1", "h2 mb-8")}
+            {markdownify(title, "h1", "h2 mb-4")}
+            <h5 className="text-gray-500">{position}</h5>
             <Social source={social} className="social-icons-simple" />
             <div className="content">
               <MDXContent content={content} />

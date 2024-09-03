@@ -9,13 +9,15 @@ const SimilarPosts = ({ posts }) => {
       {posts.map((post, i) => (
         <div key={`key-${i}`} className={"col-12 mb-4 sm:col-4"}>
           {post.frontmatter.image && (
-            <Image
-              className="rounded-lg"
-              src={post.frontmatter.image}
-              alt={post.frontmatter.title}
-              width={445}
-              height={230}
-            />
+            <Link href={`/${post.slug}`}>
+              <Image
+                className="rounded-lg"
+                src={post.frontmatter.image}
+                alt={post.frontmatter.title}
+                width={445}
+                height={230}
+              />
+            </Link>
           )}
           <ul className="mt-4 text-text">
             <li className="mb-2 mr-4 inline-block">
@@ -29,7 +31,7 @@ const SimilarPosts = ({ posts }) => {
                       href={`/categories/${slugify(category)}`}
                       className="mr-3 hover:text-primary"
                     >
-                      &#9635; {humanize(category)}
+                      ◉ {humanize(category)}
                     </Link>
                   </li>
                 ))}

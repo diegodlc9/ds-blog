@@ -29,8 +29,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-white py-2 transition-all ${
-          navFixed ? "shadow" : "pt-8 md:pt-16"
+        className={`sticky top-0 z-50 bg-white transition-all ${
+          navFixed ? "shadow" : "pt-4"
         }`}
       >
         <nav className="navbar container">
@@ -65,7 +65,7 @@ const Header = () => {
           </label>
           {/* /navbar toggler */}
 
-          <ul
+          {/* <ul
             id="nav-menu"
             className="navbar-nav order-3 hidden w-full md:order-1 md:flex md:w-auto md:space-x-2"
           >
@@ -101,7 +101,7 @@ const Header = () => {
                 )}
               </React.Fragment>
             ))}
-          </ul>
+          </ul> */}
           <div className="order-1 ml-auto md:order-2 md:ml-0">
             <div
               className="cursor-pointer p-2 text-xl text-dark hover:text-primary"

@@ -7,21 +7,23 @@ import Link from "next/link";
 const Posts = ({ posts, className, authors }) => {
   const { summary_length } = config.settings;
   return (
-    <div className={`row space-y-16 ${className}`}>
+    <div className={`row space-y-8 ${className}`}>
       {posts.map((post, i) => (
         <div
           key={`key-${i}`}
           className={i === 0 ? "col-12" : "col-12 sm:col-6"}
         >
           {post.frontmatter.image && (
-            <Image
-              className="rounded-lg"
-              src={post.frontmatter.image}
-              alt={post.frontmatter.title}
-              width={i === 0 ? "925" : "445"}
-              height={i === 0 ? "475" : "230"}
-              priority={i === 0 ? true : false}
-            />
+            <Link href={`/${post.slug}`}>
+              <Image
+                className="rounded-lg max-h-[500px]"
+                src={post.frontmatter.image}
+                alt={post.frontmatter.title}
+                width={i === 0 ? "925" : "445"}
+                height={i === 0 ? "475" : "230"}
+                priority={i === 0 ? true : false}
+              />
+            </Link>
           )}
           <ul className="mb-4 mt-4 flex flex-wrap items-center space-x-3 text-text">
             <li>
@@ -29,7 +31,7 @@ const Posts = ({ posts, className, authors }) => {
                 .filter((author) =>
                   post.frontmatter.authors
                     .map((author) => slugify(author))
-                    .includes(slugify(author.frontmatter.title))
+                    .includes(slugify(author.frontmatter.title)),
                 )
                 .map((author, i) => (
                   <Link
@@ -59,7 +61,7 @@ const Posts = ({ posts, className, authors }) => {
                       href={`/categories/${slugify(category)}`}
                       className="mr-3 hover:text-primary"
                     >
-                      &#9635; {humanize(category)}
+                      ◉ {humanize(category)}
                     </Link>
                   </li>
                 ))}

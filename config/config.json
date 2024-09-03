@@ -1,24 +1,24 @@
 {
   "site": {
-    "title": "Bookworm Next | Personal Blog Theme",
+    "title": "Release Notes Blog",
     "base_url": "/",
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_width": "200",
+    "favicon": "/images/msc-logo.SVG",
+    "logo": "/images/msc-logo.svg",
+    "logo_width": "70",
     "logo_height": "34",
-    "logo_text": "Bookworm Light"
+    "logo_text": "MSC Logo"
   },
 
   "settings": {
-    "pagination": 3,
-    "summary_length": 200,
+    "pagination": 5,
+    "summary_length": 190,
     "blog_folder": "posts"
   },
 
   "params": {
     "tag_manager_id": "",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2022 a theme by [themefisher](https://themefisher.com)"
+    "copyright": "Copyright © 2024"
   },
 
   "metadata": {
