@@ -1,5 +1,5 @@
 ---
-title: Andrian
+title: Adrian
 position: UI/UX SR. FRONTEND ENGINEER
 image: /images/authors/mark-dinn.jpg
 description: this is meta description

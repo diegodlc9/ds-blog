@@ -1,9 +1,9 @@
 ---
 title: "Implementing New Tech Stack"
 description: "meta description"
-date: 2024-09-04
+date: 2024-08-27
 image: "/images/posts/cover2.jpg"
-categories: ["Architecture"]
+categories: ["WIP"]
 authors: ["Adrian"]
 tags: ["Migration"]
 draft: false
