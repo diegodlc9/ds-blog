@@ -14,9 +14,12 @@ const Posts = ({ posts, className, authors }) => {
           className={i === 0 ? "col-12" : "col-12 sm:col-6"}
         >
           {post.frontmatter.image && (
-            <Link href={`/${post.slug}`}>
+            <Link
+              href={`/${post.slug}`}
+              className="max-h-[500px] overflow-hidden"
+            >
               <Image
-                className="rounded-lg max-h-[500px]"
+                className="rounded-lg min-h-[250px]"
                 src={post.frontmatter.image}
                 alt={post.frontmatter.title}
                 width={i === 0 ? "925" : "445"}
@@ -25,8 +28,8 @@ const Posts = ({ posts, className, authors }) => {
               />
             </Link>
           )}
-          <ul className="mb-4 mt-4 flex flex-wrap items-center space-x-3 text-text">
-            <li>
+          <ul className="mb-1 mt-3 flex flex-wrap items-center space-x-3 text-text">
+            {/* <li>
               {authors
                 .filter((author) =>
                   post.frontmatter.authors
@@ -51,7 +54,7 @@ const Posts = ({ posts, className, authors }) => {
                     <span>{author.frontmatter.title}</span>
                   </Link>
                 ))}
-            </li>
+            </li> */}
             <li>{dateFormat(post.frontmatter.date)}</li>
             <li>
               <ul>

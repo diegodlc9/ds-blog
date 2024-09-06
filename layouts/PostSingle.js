@@ -20,7 +20,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
           <article className="text-center">
             {markdownify(title, "h1", "h2")}
             <ul className="mb-8 mt-4 flex flex-wrap items-center justify-center space-x-3 text-text">
-              <li>
+              {/* <li>
                 {authors
                   .filter((author) =>
                     frontmatter.authors
@@ -45,7 +45,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                       <span>{author.frontmatter.title}</span>
                     </Link>
                   ))}
-              </li>
+              </li> */}
               <li>{dateFormat(date)}</li>
               <li>
                 <ul>
