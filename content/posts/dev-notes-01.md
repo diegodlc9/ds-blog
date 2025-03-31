@@ -15,7 +15,7 @@ With the Design System App, designers and developers can collaborate seamlessly,
 
 **Key Features:**
 
-- **Management of Existing and New Components:** Easily manage and integrate both existing and new components to maintain a consistent design language across all your projects.
+- **Management of Component Status:** Effortlessly manage component status within the app to keep the work progress up-to-date.
 
 **Upcoming Features:**
 
