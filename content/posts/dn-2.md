@@ -3,9 +3,9 @@ title: "New DS Architecture"
 description: "meta description"
 date: 2024-08-26
 image: "/images/posts/site-arch.jpg"
-categories: ["WIP"]
+categories: ["Dev"]
 authors: ["Diego"]
-tags: ["Site Architecture"]
+tags: ["Dev Logs", "Site Architecture"]
 draft: false
 ---
 

@@ -3,7 +3,7 @@ title: "Release Notes 1.0"
 description: "meta description"
 date: 2024-06-05
 image: "/images/posts/cover.jpg"
-categories: ["dev"]
+categories: ["Design System"]
 authors: ["Diego"]
 tags: ["Release Notes"]
 draft: false
@@ -47,7 +47,7 @@ Foundation element.
 
 ---
 
-## Radio 
+## Radio
 
 ![](./images/posts/radio.jpg)
 

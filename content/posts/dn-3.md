@@ -3,9 +3,9 @@ title: "Introducing Our New Design System App"
 description: "meta description"
 date: 2025-03-32
 image: "/images/posts/new-ds.jpg"
-categories: ["dev"]
+categories: ["Dev"]
 authors: ["Diego"]
-tags: ["Design system App"]
+tags: ["Dev Logs"]
 draft: false
 ---
 

@@ -4,32 +4,37 @@ import { humanize, slugify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
 
-const Posts = ({ posts, className, authors }) => {
+const Posts = ({ posts, className, title, authors }) => {
   const { summary_length } = config.settings;
   return (
-    <div className={`row space-y-8 ${className}`}>
+    <div className={`row space-y-6 ${className}`}>
+      <h2 className={`text-center ${title ? "block" : "hidden"}`}>
+        📰 News and updates from the team
+      </h2>
       {posts.map((post, i) => (
-        <div
-          key={`key-${i}`}
-          className={i === 0 ? "col-12" : "col-12 sm:col-6"}
-        >
-          {post.frontmatter.image && (
-            <Link
-              href={`/${post.slug}`}
-              className="max-h-[500px] overflow-hidden"
-            >
-              <Image
-                className="rounded-lg min-h-[250px]"
-                src={post.frontmatter.image}
-                alt={post.frontmatter.title}
-                width={i === 0 ? "925" : "445"}
-                height={i === 0 ? "475" : "230"}
-                priority={i === 0 ? true : false}
-              />
-            </Link>
-          )}
-          <ul className="mb-1 mt-3 flex flex-wrap items-center space-x-3 text-text">
-            {/* <li>
+        <>
+          <div
+            key={`key-${i}`}
+            className={i === 0 ? "col-12 flex flex-row" : "col-12 sm:col-6"}
+          >
+            {post.frontmatter.image && (
+              <Link
+                href={`/${post.slug}`}
+                className={`max-h-[500px] overflow-hidden ${i === 0 ? "col-8 mr-2" : "col-12 sm:col-6"}`}
+              >
+                <Image
+                  className="rounded-lg min-h-[250px]"
+                  src={post.frontmatter.image}
+                  alt={post.frontmatter.title}
+                  width={i === 0 ? "925" : "445"}
+                  height={i === 0 ? "475" : "230"}
+                  priority={i === 0 ? true : false}
+                />
+              </Link>
+            )}
+            <div className="flex flex-col">
+              <ul className="mb-1 mt-3 flex flex-wrap items-center space-x-3 text-text">
+                {/* <li>
               {authors
                 .filter((author) =>
                   post.frontmatter.authors
@@ -55,31 +60,39 @@ const Posts = ({ posts, className, authors }) => {
                   </Link>
                 ))}
             </li> */}
-            <li>{dateFormat(post.frontmatter.date)}</li>
-            <li>
-              <ul>
-                {post.frontmatter.categories.map((category, i) => (
-                  <li className="inline-block" key={`category-${i}`}>
-                    <Link
-                      href={`/categories/${slugify(category)}`}
-                      className="mr-3 hover:text-primary"
-                    >
-                      ◉ {humanize(category)}
-                    </Link>
-                  </li>
-                ))}
+
+                <li>{dateFormat(post.frontmatter.date)}</li>
+                <li>
+                  <ul>
+                    {post.frontmatter.categories.map((category, i) => (
+                      <li className="inline-block" key={`category-${i}`}>
+                        <Link
+                          href={`/categories/${slugify(category)}`}
+                          className="mr-3 hover:text-primary"
+                        >
+                          ◉ {humanize(category)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
-          <h3 className="mb-2">
-            <Link href={`/${post.slug}`} className="block hover:text-primary">
-              {post.frontmatter.title}
-            </Link>
-          </h3>
-          <p className="text-text">
-            {post.content && post.content.slice(0, Number(summary_length))}...
-          </p>
-        </div>
+              <h4 className="mb-2">
+                <Link
+                  href={`/${post.slug}`}
+                  className="block hover:text-primary text-pretty"
+                >
+                  {post.frontmatter.title}
+                </Link>
+              </h4>
+              <p className="text-text">
+                {post.content && post.content.slice(0, Number(summary_length))}
+                ...
+              </p>
+            </div>
+          </div>
+          {i === 0 ? <hr></hr> : ""}
+        </>
       ))}
     </div>
   );

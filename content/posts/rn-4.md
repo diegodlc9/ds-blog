@@ -3,7 +3,7 @@ title: "Release Notes 4.0"
 description: "meta description"
 date: 2024-08-03
 image: "/images/posts/cover.jpg"
-categories: ["dev"]
+categories: ["Design System"]
 authors: ["Diego"]
 tags: ["Release Notes"]
 draft: false
@@ -33,7 +33,7 @@ Great news! Our latest update is now live, bringing you fresh components designe
 
 ---
 
-## Spinner 
+## Spinner
 
 ![](./images/posts/spinner.jpg)
 
@@ -48,7 +48,7 @@ Great news! Our latest update is now live, bringing you fresh components designe
 
 ---
 
-## Dialog 
+## Dialog
 
 ![](./images/posts/dialog.jpg)
 

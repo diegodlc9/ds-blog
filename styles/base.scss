@@ -3,7 +3,11 @@ html {
 }
 
 body {
-  @apply bg-body font-primary font-normal leading-relaxed text-text;
+  @apply bg-gray-200 font-primary font-normal leading-relaxed text-text;
+}
+
+hr {
+  border: 1px solid rgba(174, 174, 174, 0.3);
 }
 
 h1,

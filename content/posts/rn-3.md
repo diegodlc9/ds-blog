@@ -3,7 +3,7 @@ title: "Release Notes 3.0"
 description: "meta description"
 date: 2024-06-19
 image: "/images/posts/cover.jpg"
-categories: ["dev"]
+categories: ["Design System"]
 authors: ["Diego"]
 tags: ["Release Notes"]
 draft: false
@@ -36,7 +36,7 @@ Foundation element.
 
 ---
 
-## Typography 
+## Typography
 
 Foundation element.
 
@@ -58,7 +58,7 @@ Foundation element.
 
 ---
 
-## Spacing 
+## Spacing
 
 Foundation element.
 

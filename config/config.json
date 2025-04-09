@@ -8,19 +8,16 @@
     "logo_height": "34",
     "logo_text": "MSC Logo"
   },
-
   "settings": {
     "pagination": 5,
     "summary_length": 190,
     "blog_folder": "posts"
   },
-
   "params": {
     "tag_manager_id": "",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2024"
+    "copyright": "Copyright © 2025"
   },
-
   "metadata": {
     "meta_author": "Themefisher",
     "meta_image": "/images/og-image.png",

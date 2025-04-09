@@ -3,7 +3,7 @@ title: "Release Notes 2.0"
 description: "meta description"
 date: 2024-06-11
 image: "/images/posts/cover.jpg"
-categories: ["dev"]
+categories: ["Design System"]
 authors: ["Diego"]
 tags: ["Release Notes"]
 draft: false
@@ -61,7 +61,7 @@ We’re thrilled to announce the latest update, packed with brand-new components
 
 ---
 
-## Divider 
+## Divider
 
 ![](./images/posts/divider.jpg)
 

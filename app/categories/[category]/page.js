@@ -13,8 +13,8 @@ const Category = ({ params }) => {
   const posts = getSinglePage(`content/${blog_folder}`);
   const filterPosts = posts.filter((post) =>
     post.frontmatter.categories.find((category) =>
-      slugify(category).includes(params.category)
-    )
+      slugify(category).includes(params.category),
+    ),
   );
   const authors = getSinglePage("content/authors");
   //
@@ -23,11 +23,11 @@ const Category = ({ params }) => {
       <SeoMeta title={category} />
       <div className="section">
         <div className="container">
-          <h1 className="h2 mb-8 text-center">
+          <h1 className="h2 mb-2 text-center">
             Showing posts from <span className="text-primary">{category}</span>{" "}
             category
           </h1>
-          <Posts posts={filterPosts} authors={authors} />
+          <Posts posts={filterPosts} authors={authors} title={false} />
         </div>
       </div>
     </>

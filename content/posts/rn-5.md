@@ -3,7 +3,7 @@ title: "Release Notes 5 .0"
 description: "meta description"
 date: 2024-08-14
 image: "/images/posts/cover.jpg"
-categories: ["dev"]
+categories: ["Design System"]
 authors: ["Diego"]
 tags: ["Release Notes"]
 draft: false
@@ -35,7 +35,7 @@ Basic component with no variants and states.
 
 ---
 
-## Pagination 
+## Pagination
 
 ![](./images/posts/pagination.jpg)
 

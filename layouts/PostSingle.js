@@ -19,7 +19,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
         <div className="container">
           <article className="text-center">
             {markdownify(title, "h1", "h2")}
-            <ul className="mb-8 mt-4 flex flex-wrap items-center justify-center space-x-3 text-text">
+            <ul className="pt-2 pb-5 flex flex-wrap items-center justify-center space-x-3 text-text">
               {/* <li>
                 {authors
                   .filter((author) =>

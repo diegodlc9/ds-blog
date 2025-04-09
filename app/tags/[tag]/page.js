@@ -11,7 +11,7 @@ const Tag = ({ params }) => {
   const tag = params.tag;
   const posts = getSinglePage(`content/${blog_folder}`);
   const filterPosts = posts.filter((post) =>
-    post.frontmatter.tags.find((tag) => slugify(tag).includes(params.tag))
+    post.frontmatter.tags.find((tag) => slugify(tag).includes(params.tag)),
   );
   const authors = getSinglePage("content/authors");
 
@@ -20,7 +20,7 @@ const Tag = ({ params }) => {
       <SeoMeta title={tag} />
       <div className="section">
         <div className="container">
-          <h1 className="h2 mb-8 text-center">
+          <h1 className="h2 mb-2 text-center">
             Showing posts from <span className="text-primary">{tag}</span> tag
           </h1>
           <Posts posts={filterPosts} authors={authors} />

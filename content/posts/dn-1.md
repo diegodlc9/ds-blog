@@ -3,9 +3,9 @@ title: "Implementing New Tech Stack"
 description: "meta description"
 date: 2024-08-27
 image: "/images/posts/cover2.jpg"
-categories: ["WIP"]
+categories: ["Dev"]
 authors: ["Adrian"]
-tags: ["Migration"]
+tags: ["Dev Logs", "Migration"]
 draft: false
 ---
 
@@ -15,7 +15,7 @@ The architecture proposal presented is based on an adequate and efficient work m
 
 ![](./images/posts/diagram1.jpg)
 
-## Technology stack (MSC Fuel Design System  V2)
+## Technology stack (MSC Fuel Design System V2)
 
 **We have selected the following technologies:**
 
@@ -73,7 +73,7 @@ Works as the primary provider of the styles of our Design System, it is the core
 
 ### The problem with storybook
 
-It is complicated to use vanilla and storybook as it is as if we were working double for everything. 
+It is complicated to use vanilla and storybook as it is as if we were working double for everything.
 
 Creating a component would require creating it in vanilla with tailwind, but unlike React, with vanilla you have to make a series of adjustments and recreate the component so that storybook is able to display it.
 
@@ -88,9 +88,10 @@ This is an example for the Alphabetical Pager, it shows the difference of using,
 Maybe it will be some ways to doit with vanilla but we don´t need to create again something that already exist, and it is polished through the time.
 
 ##### Alphabetic Pager
+
 ![](./images/posts/alpha-pager.jpg)
 
-#####  Code Difference:
+##### Code Difference:
 
 <div className='flex gap-2'>
   <div className='flex-1'>
